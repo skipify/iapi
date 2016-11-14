@@ -1,0 +1,27 @@
+{
+    "name": "skipify/iapi",
+    "version":"0.0.1",
+    "description": "系统间接口通信方法封装API",
+    "keywords": [],
+    "license": "MIT",
+    "homepage": "http://ifanybug.com",
+    "support": {
+        "issues": "https://github.com/skipify/iapi/issues",
+        "source": "https://github.com/skipify/iapi"
+    },
+    "authors": [
+        {
+            "name": "skipify",
+            "email": "skipify@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "ext-mcrypt": "*",
+        "ext-mbstring": "*",
+        "skipify/vitex":"dev-master"
+    },
+    "autoload": {
+        "psr-4": {"iapi\\": "src"}
+    }
+}
