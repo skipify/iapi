@@ -19,7 +19,7 @@
         "php": ">=5.5.0",
         "ext-mcrypt": "*",
         "ext-mbstring": "*",
-        "skipify/vitex":"dev-master"
+        "skipify/vitex":"0.8"
     },
     "autoload": {
         "psr-4": {"iapi\\": "src"}
