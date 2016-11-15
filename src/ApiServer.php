@@ -65,6 +65,9 @@ class ApiServer
             throw new Exception('签名错误');
         }
         $data = $method == 'GET' ? $_GET['data'] : $_POST['data'];
+        if(!$data){
+            return '';
+        }
         if ($this->useAesEncode && $data) {
             $data = Utils::decrypt($data, $this->aeskey);
         }
