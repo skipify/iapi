@@ -1,6 +1,5 @@
 <?php
 namespace iapi;
-use vitex\core\Exception;
 
 /**
  * 生成签名
@@ -40,6 +39,7 @@ class Sign
      * 2. 取当前时间戳 time
      * 3. 取得秘钥 secret
      * 4. md5(time.secret)
+     * @param  $time
      * @return array
      * @throws Exception
      */
@@ -63,7 +63,7 @@ class Sign
      */
     public function check($time,$sign,$expire=true)
     {
-        list($t,$checkSign) = $this->get($time);
+        list(,$checkSign) = $this->get($time);
         if($sign != $checkSign){
             return false;
         }

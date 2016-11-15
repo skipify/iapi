@@ -44,7 +44,7 @@ class Http
 
     /**
      * 发送get请求
-     * @return \Httpful\Response
+     * @return mixed
      */
     public function get()
     {
@@ -54,7 +54,7 @@ class Http
     /**
      * 发送post请求
      *
-     * @return \Httpful\Response
+     * @return mixed
      */
     public function post()
     {

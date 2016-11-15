@@ -1,7 +1,5 @@
 <?php
 namespace iapi;
-use vitex\core\Exception;
-use vitex\helper\Utils;
 
 /**
  * 接口服务
@@ -92,6 +90,8 @@ class ApiServer
 
     /**
      * 验证签名
+     * @param string $sign
+     * @param string $timestamp
      * @return bool
      */
     private function _checkSign($sign = '', $timestamp = '')
