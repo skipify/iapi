@@ -169,4 +169,24 @@ class ApiServer
         return $retArr['data'];
     }
 
+    /**
+     * 返回链接地址
+     * @return string
+     * @throws Exception
+     */
+    public function url()
+    {
+        list($time, $sign) = $this->sign->get();
+        $url = strpos($this->apiurl, '?') === false ? $this->apiurl . '?' : $this->apiurl . '&';
+        $url = $url . 'timestamp=' . $time . '&sign=' . $sign;
+        $data = json_encode($this->apidata, JSON_UNESCAPED_UNICODE);
+        if ($this->useAesEncode) {
+            $data = Utils::encrypt($data, $this->aeskey);
+        }
+        if($data){
+            $url .= 'data='.$data;
+        }
+        return $url;
+    }
+
 }
