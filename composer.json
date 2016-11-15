@@ -1,5 +1,6 @@
 {
     "name": "skipify/iapi",
+    "minimum-stability": "dev",
     "version":"0.0.1",
     "description": "系统间接口通信方法封装API",
     "keywords": [],
@@ -19,7 +20,7 @@
         "php": ">=5.5.0",
         "ext-mcrypt": "*",
         "ext-mbstring": "*",
-        "skipify/vitex":"0.8"
+        "skipify/vitex":"dev-master"
     },
     "autoload": {
         "psr-4": {"iapi\\": "src"}
