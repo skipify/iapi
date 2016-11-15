@@ -184,7 +184,7 @@ class ApiServer
             $data = Utils::encrypt($data, $this->aeskey);
         }
         if($data){
-            $url .= 'data='.$data;
+            $url .= '&data='.$data;
         }
         return $url;
     }
