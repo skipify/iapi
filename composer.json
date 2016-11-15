@@ -15,7 +15,7 @@
             "name": "skipify",
             "email": "skipify@qq.com"
         }
-    ],
+    ], 
     "require": {
         "php": ">=5.5.0",
         "ext-mcrypt": "*",
